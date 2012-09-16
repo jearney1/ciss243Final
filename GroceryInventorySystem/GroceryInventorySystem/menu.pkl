@@ -8,81 +8,35 @@ Main Menu:
 
 Select option:
 
+
 #include "stdafx.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
-struct Store
-{
-  //public constructor/ with default constructor
-	Store(int in, string name, double ws, int ohn, int mn, string v, int on, double rn, string d)
-	{
-		itemNum = in;
-		itemName = name;
-		wholeSale = ws;
-		onHandNum = ohn;
-		maxNum = mn;
-		vendor = v;
-		orderNum = on;
-		retailNum = rn;
-		depart = d;
-	}
-	Store()
-	{
-		itemNum = 0;
-		itemName = " ";
-		wholeSale = 0;
-		onHandNum = 0;
-		maxNum = 0;
-		vendor = " ";
-		orderNum = 0;
-		retailNum = 0;
-		depart = " ";
-	}
-
-	int itemNum;
-	string itemName;
-	double wholeSale;
-	int	onHandNum;
-	int	maxNum;
-	string vendor;
-	int	orderNum;
-	double retailNum;
-	string depart;
-
-	//function prototypes
-	int displayChoices();
-};
-
-int Store::displayChoices()
-{
-	int choice;
-
-//Display menu
-		cout<< "1. Add"<<endl;
-		cout<< "2. Edit"<<endl;
-		cout<< "3. Remove"<<endl;
-		cout<< "4. View"<<endl;
-		cout<< "5. Help"<<endl;
-		cout<< "6. Exit"<<endl;
-	cin >> choice;
-
-	//validate choice
-	while ( choice <1 || choice >6 )
-    	{
-        	cout << "Enter menu number between 1 and 6: "
-				<< "re-enter: ";
-			cin >>choice;
-		}
-	return choice;
-}
-
 int main()
 {
-	Store selection;
-	int choice, loopChoice;
+	int input = 0; // User-input number to select the menu item
+	// Loop that repeats the menu and options until the user enters -1 (quit)
 	
+	while ( input != -1 )
+    	{
+        	cout << "Enter menu number: ";
+	//Display menu
+		Cout<< "1. Add"<<;
+		cout<< "2. Edit"<<;
+		cout<< "3. Remove"<<;
+		cout<< "4. View"<<;
+		cout<< "5. Help"<<;
+		cout<< "6. Exit"<<;
+		  if (!(cin >> input)) // User enters the Number
+		  {
+			  cin.clear();
+			  while (cin.get()!= '\n');
+			  cout << "Invalid Input!\n";
+			  continue;
+		  }//end if
+          
 	while (loopChoice !=0)
 	{
 		choice = selection.displayChoices();
@@ -90,21 +44,21 @@ int main()
           switch ( choice )
           {         
                		
-                 case 1: 
+                case 1: 
 					if (choice == 1)
 					add(); break;// Call ADD function, then break the switch
 
                     	
-                 case 2: 
+                case 2: 
 					if (choice == 2)
 					edit(); break;// Call EDIT function, then break the switch
 
                     	
-                 case 3: 
+                case 3: 
 					if (choice == 3)
 					remove(); break;// Call REMOVE ITEM function, then break the switch
 
-		    	case 4: 
+		case 4: 
 					if(choice == 4)
 					display(); break;// Call DISPLAY function, then break the switch
 		    	
@@ -112,20 +66,15 @@ int main()
 					if (choice == 5)
 					help(); break;// Call  HELP function, then break the switch
  			
-				case 6: 
+		case 6: 
 					if (choice == 6)
 					exit(); break;//exit program
 			
                  default: 
 					 cout << "Invalid number\n"; break;// Default to invalid number error statement
-          }//end switch
-          
+          }//end switch         
     }  // End while 
-
-	cout << "would you like to make another choice?"
-		 << "enter 1 through 6\n";
-	cin >> loopChoice;
-
-    return 0;
+	return 0;
 }//end main
+
 
