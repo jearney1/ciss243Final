@@ -44,30 +44,22 @@ int main()
           switch ( choice )
           {         
                		
-                case 1: 
-					if (choice == 1)
+                case 1: 					
 					add(); break;// Call ADD function, then break the switch
 
-                    	
                 case 2: 
-					if (choice == 2)
 					edit(); break;// Call EDIT function, then break the switch
-
                     	
-                case 3: 
-					if (choice == 3)
+                case 3: 		
 					remove(); break;// Call REMOVE ITEM function, then break the switch
 
-		case 4: 
-					if(choice == 4)
+		case 4: 	
 					display(); break;// Call DISPLAY function, then break the switch
 		    	
-                case 5: 
-					if (choice == 5)
+                case 5: 		
 					help(); break;// Call  HELP function, then break the switch
  			
 		case 6: 
-					if (choice == 6)
 					exit(); break;//exit program
 			
                  default: 
