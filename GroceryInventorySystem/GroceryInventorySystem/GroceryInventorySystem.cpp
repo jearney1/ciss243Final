@@ -23,7 +23,7 @@ int main(array<System::String ^> ^args)
 {
 
     /* we are not putting anything into here till iteration 2 */
-    /* WINDOWS IS PISSING ME OFF!!!! */
+   
 
 
     system("PAUSE");
@@ -53,12 +53,38 @@ int main(array<System::String ^> ^args)
 	/*McKinley ********************^ displayMenu method ^************* DATE */
 
 
-	/*Jody ********************V  handleMenuChoice method  V************* DATE */
+	/*Jody ********************V  handleMenuChoice method  V************* DATE 9-19-2012 */
 	//returns void and takes in an int
 	//calls method according to int passed in
+handleMenuChoice(displayMenue)
+{
+	switch ( choice )
+          {         
+               		
+                case 1: 					
+					add(); break;// Call ADD function, then break the switch
 
+                case 2: 
+					edit(); break;// Call EDIT function, then break the switch
+                    	
+                case 3: 		
+					remove(); break;// Call REMOVE ITEM function, then break the switch
 
-	/*Jody ********************^  handleMenuChoice method  ^************* DATE */
+				case 4: 	
+					display(); break;// Call DISPLAY function, then break the switch
+		    	
+                case 5: 		
+					help(); break;// Call  HELP function, then break the switch
+ 			
+				case 6: 
+					exit(); break;//exit program
+			
+                 default: 
+					 cout << "Invalid number\n"; break;// Default to invalid number error statement
+          }//end switch         
+}//end handleMenuChoice method
+
+	/*Jody ********************^  handleMenuChoice method  ^************* DATE 9-19-2012 */
 
 
 	/*Elizabeth ********************V stringsToItems method V************* DATE */
